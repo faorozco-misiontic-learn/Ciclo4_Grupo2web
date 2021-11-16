@@ -9,6 +9,7 @@ export default class Login extends React.Component {
       pass: "",
     };
   }
+
   render() {
     return (
       <Container id="login-container" style={{ marginTop: 200 }}>
@@ -18,32 +19,17 @@ export default class Login extends React.Component {
               <h2>Iniciar Sesión</h2>
             </Row>
             <Row>
-              <Col
-                sm="12"
-                xs="12"
-                md={{ span: 4, offset: 4 }}
-                lg={{ span: 4, offset: 4 }}
-                xl={{ span: 4, offset: 4 }}
-              >
+              <Col sm="12" xs="12" md={{ span: 4, offset: 4 }} lg={{ span: 4, offset: 4 }} xl={{ span: 4, offset: 4 }}>
                 <Form>
                   <Form.Group>
                     <Form.Label style={{ float: "left" }}>Usuario</Form.Label>
-                    <Form.Control
-                      onChange={(e) =>
-                        this.setState({ usuario: e.target.value })
-                      }
-                    />
+                    <Form.Control onChange={(e) => this.setState({ usuario: e.target.value })} />
                     {/* {this.state.usuario} */}
                   </Form.Group>
 
                   <Form.Group>
-                    <Form.Label style={{ float: "left" }}>
-                      Contraseña
-                    </Form.Label>
-                    <Form.Control
-                      type="password"
-                      onChange={(e) => this.setState({ pass: e.target.value })}
-                    />
+                    <Form.Label style={{ float: "left" }}>Contraseña</Form.Label>
+                    <Form.Control type="password" onChange={(e) => this.setState({ pass: e.target.value })} />
                     {/* {this.state.pass} */}
                   </Form.Group>
 
